@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -12,5 +10,22 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<bean id="helloWorld" class="com.zym.spring.beans.HelloWorld">
 		<property name="name" value="zhao"></property>
+	</bean>
+	<bean id="car1" class="com.zym.spring.beans.Car">
+		<property name="pinpai" value="dazhong"></property>
+		<property name="chandi" value="shanghai"></property>
+		<property name="jiage" value="200000"></property>
+		<property name="maxpreed" value="160"></property>
+	</bean>
+
+	<bean id="car2" class="com.zym.spring.beans.Car">
+		<constructor-arg value="benchi" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="beijing" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="180" index="2"></constructor-arg>
+	</bean>
+	<bean id="car3" class="com.zym.spring.beans.Car">
+		<constructor-arg value="xiandai" index="0"></constructor-arg>
+		<constructor-arg value="gaungzhou" index="1"></constructor-arg>
+		<constructor-arg value="600000" type="java.lang.Double"></constructor-arg>
 	</bean>
 </beans>
