@@ -8,6 +8,7 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/resource/springFirst.xml</config>
+		<config>src/main/resource/Beans-autowire.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
