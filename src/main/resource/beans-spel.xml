@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:property-placeholder location="classpath:carInfo.properties" />
+	<bean id="address" class="com.zym.spring.beans.spel.Address">
+		<property name="city" value="大连"></property>
+		<property name="street" value="五一路"></property>
+	</bean>
+	<bean id="car" class="com.zym.spring.beans.spel.Car">
+		<property name="brand" value="法拉利"></property>
+		<property name="price" value="1000000.0"></property>
+		<!-- 引用外部属性文件及类的静态属性 -->
+		<property name="perimeter" value="#{ ${radius} ^ 2 * T(java.lang.Math).PI}"></property>
+	</bean>
+
+	<bean id="person" class="com.zym.spring.beans.spel.Person">
+		<property name="name" value="赵颖铭"></property>
+		<!-- 引用对象 -->
+		<property name="car" value="#{car}"></property>
+		<!-- 引用对象的属性方法 -->
+		<property name="city" value="#{address.getCity()}"></property>
+		<!-- 引用if...else...及引用对象的属性 -->
+		<property name="info" value="#{car.price > 300000 ? '金领':'白领'}"></property>
+	</bean>
+</beans>
