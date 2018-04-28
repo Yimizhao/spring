@@ -13,6 +13,9 @@
 		<config>src/main/resource/beans-properities.xml</config>
 		<config>src/main/resource/beans-spel.xml</config>
 		<config>src/main/resource/beans-lifecycle.xml</config>
+		<config>src/main/resource/beans-factory.xml</config>
+		<config>src/main/resource/beans-beanFactory.xml</config>
+		<config>src/main/resource/beans-annotation.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

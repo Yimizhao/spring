@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<!-- 静态工厂方法配置Bean -->
+	<bean id="car" class="com.zym.spring.beans.factory.StaticCarFactory"
+		factory-method="getCar">
+		<constructor-arg value="audi"></constructor-arg>
+	</bean>
+
+	<!-- 实例工厂方法配置Bean -->
+	<bean id="instanceFactory" class="com.zym.spring.beans.factory.InstanceFactory"></bean>
+	<bean id="car1" factory-bean="instanceFactory" factory-method="getCar">
+		<constructor-arg value="dazhong"></constructor-arg>
+	</bean>
+</beans>
