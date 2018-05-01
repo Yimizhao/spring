@@ -18,6 +18,8 @@
 		<config>src/main/resource/beans-annotation.xml</config>
 		<config>src/main/resource/applicationContext.xml</config>
 		<config>src/main/resource/applicationContext-xml.xml</config>
+		<config>src/main/resource/applicationContext-jdbc.xml</config>
+		<config>src/main/resource/applicationContext-tx.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
